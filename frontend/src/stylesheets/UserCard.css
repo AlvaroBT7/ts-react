@@ -1,0 +1,32 @@
+.UserCard {
+  font-family: sans-serif;
+  color: #222;
+  background-color: #eee;
+  /* border-radius: 0.2em; */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 13em;
+  border: 0.01em solid #aaa;
+  border-radius: 0.2em;
+}
+
+.UserCard * {
+  padding: 15px 0;
+}
+
+.UserCard-title {
+  font-size: 22px;
+}
+
+.UserCard-desc {
+  font-size: 13px;
+  color: #444;
+  font-style: italic;
+}
+
+.UserCard-img {
+  width: 100px;
+  border-radius: 100%;
+}
