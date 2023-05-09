@@ -8,10 +8,10 @@ const App = () => {
   const [users, setUsers] = useState<User[] | null>(null);
 
   useEffect(() => {
-    fetch("/users")
+    fetch("/api/users")
       .then((response) => response.json())
       .then((data) => setUsers(data))
-      .catch((err) => console.warn(err));
+      .catch((err) => console.error(err));
   }, []);
 
   if (users) {
@@ -19,7 +19,11 @@ const App = () => {
       <>
         {users.map((user) => {
           return (
-            <UserCard name={user.name} description={user.description || null} />
+            <UserCard
+              key={user.id}
+              name={user.name}
+              description={user.description || null}
+            />
           );
         })}
       </>

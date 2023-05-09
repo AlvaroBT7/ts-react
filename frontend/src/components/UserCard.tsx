@@ -11,7 +11,10 @@ const UserCard = ({ name, description = null }: Props): React.ReactElement => {
 
   useEffect(() => {
     fetch("https://picsum.photos/300/300")
-      .then((response) => setImg(response.url))
+      .then((response) => {
+        const { url } = response;
+        setImg(url);
+      })
       .catch((err) => console.error(err));
   }, []);
 
