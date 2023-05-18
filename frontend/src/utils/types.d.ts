@@ -3,3 +3,9 @@ export interface User {
   name: string;
   description?: string;
 }
+
+export interface Pages {
+  home: "home";
+  start: "start";
+  help: "help";
+}
